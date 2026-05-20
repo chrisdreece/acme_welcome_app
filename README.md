@@ -69,12 +69,29 @@ Create your local environment file:
 cp .env.example .env
 ```
 
-Then put your OpenAI key into `.env`:
+## Adding Your OpenAI API Key
+
+This app sends each chat message to OpenAI so the assistant can generate a reply. To do that, the app needs an OpenAI API key.
+
+An API key is like a password for your OpenAI developer account. It tells OpenAI which account is making the request, so usage can be authorized and billed correctly.
+
+To get your own key:
+
+1. Go to [OpenAI API keys](https://platform.openai.com/settings/organization/api-keys).
+2. Sign in or create an OpenAI developer account.
+3. Create a new API key.
+4. Copy the key and paste it into your local `.env` file.
+
+Put your OpenAI key into `.env`:
 
 ```env
 OPENAI_API_KEY=your_real_openai_key_here
 OPENAI_MODEL=gpt-5.4
 ```
+
+The `.env` file is for private local settings. It is listed in `.gitignore`, so it should not be committed or shared. That matters because anyone with your API key could use your OpenAI account.
+
+The repo includes `.env.example` instead. That file shows the settings the app expects, but it uses placeholder values so it is safe to share.
 
 Start the app:
 
