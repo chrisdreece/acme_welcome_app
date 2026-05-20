@@ -30,7 +30,7 @@ The main goal of your setup is:
 - get the app running on your own computer
 - confirm it works with your own OpenAI API key
 - understand the main files
-- then use Codex in plain English to make changes safely
+- then use the Codex desktop app in plain English to make changes safely
 
 ## The Simple Sequence
 
@@ -42,13 +42,13 @@ This is the recommended order:
 4. Clone or download the repo
 5. Set up the app locally and add your OpenAI API key
 6. Test the app from the command line so you know it works
-7. Install or open Codex
-8. Use Codex inside this project and ask for small changes in normal English
+7. Install or open the Codex desktop app
+8. Open this project in Codex and ask for small changes in normal English
 
 Why this order matters:
 - first you get the app running without any coding assistant involved
 - then you know the local setup works
-- then Codex becomes a helper for editing the app, not another mystery in the middle of setup
+- then the Codex desktop app becomes a helper for editing the app, not another mystery in the middle of setup
 
 ## Very Helpful Tip
 
@@ -78,7 +78,6 @@ Think of it as:
 - a text window for talking directly to your computer
 - the place where you run setup commands
 - the place where you start the app
-- the place where you can later start Codex CLI
 
 Important: Terminal or PowerShell is not the Acme app itself. It is the tool you use to launch and manage the app.
 
@@ -402,63 +401,39 @@ This testing step matters because it proves:
 - your `.env` file is set up correctly
 - the app runs before you try editing it with Codex
 
-## Step 7: Install Or Open Codex
+## Step 7: Install Or Open The Codex Desktop App
 
 Purpose: use a coding assistant to inspect and edit the project with natural language.
 
-You have two common options:
-- use the Codex desktop app
-- use the Codex CLI in Terminal or PowerShell
+For this guide, use the Codex desktop app instead of the command-line Codex tool.
 
-The Codex app is available for macOS and Windows. You can open the app, sign in with your ChatGPT account or an OpenAI API key, select this project folder, and ask Codex for help.
+The Codex desktop app gives you a chat-style interface. That is friendlier for this learning project because you can open the project folder, type requests in normal English, and review changes without learning another command-line tool first.
+
+The Codex app is available for macOS and Windows. Open the app, sign in with your ChatGPT account or an OpenAI API key, select this project folder, and ask Codex for help.
 
 Official OpenAI docs:
 - [Codex app getting started](https://developers.openai.com/codex/app#getting-started)
-- [Codex CLI setup](https://developers.openai.com/codex/cli#cli-setup)
-
-If you want to use the Codex CLI, first check whether `npm` is installed:
-
-```bash
-npm --version
-```
-
-If that prints a version number, install Codex CLI with:
-
-```bash
-npm i -g @openai/codex
-```
-
-If `npm` is not found, install Node.js first, then run the Codex install command again. `npm` comes with Node.js.
-
-After installation, start Codex from inside the project folder:
-
-```bash
-codex
-```
 
 What this step does:
-- installs or opens the coding assistant tool
+- opens the coding assistant tool
 - lets you sign in with your own account or key
-- lets you ask for changes in plain English
+- lets you select the `acme_welcome_app` project folder
+- gives you a chat-style place to ask for changes in plain English
 - helps you inspect files before editing them
 
 ## Step 8: Use Codex Inside This Project
 
 Purpose: ask for changes in simple English, one small change at a time.
 
-Make sure you are inside the project folder:
+In the Codex desktop app:
 
-```bash
-cd acme_welcome_app
-```
+1. Choose or open the `acme_welcome_app` project folder.
+2. Make sure Codex is working locally in that folder.
+3. Start a chat.
+4. Ask for one small change.
+5. Review what Codex changed before moving on.
 
-Then start Codex if you are using the CLI:
-
-```bash
-codex
-```
-
-Now you can type requests in normal language.
+You can type requests in normal language.
 
 Examples:
 
@@ -482,7 +457,7 @@ The key idea is:
 - Terminal or PowerShell is where you run commands
 - Git is how you get the project onto your computer
 - the local setup proves the app works
-- Codex is the helper you use after that to inspect and change the project
+- the Codex desktop app is the helper you use after that to inspect and change the project
 
 ## What The Main Pieces Of The App Are
 
@@ -528,15 +503,16 @@ Here is the app in plain English:
 
 If you want a safe and simple rhythm, use this:
 
-1. Open Terminal, PowerShell, or Codex
+1. Open Terminal or PowerShell
 2. Go into the project folder
 3. Activate the virtual environment
 4. Run the app
 5. Test the app in the browser
 6. Stop the app with `Control + C`
-7. Ask Codex for one small change
-8. Read what changed
-9. Run the app again and test the result
+7. Open the project folder in the Codex desktop app
+8. Ask Codex for one small change
+9. Read what changed
+10. Run the app again and test the result
 
 That pattern helps you stay grounded: run, test, change, test again.
 
@@ -550,8 +526,8 @@ A few common fixes:
 - If `pip install -r requirements.txt` fails, make sure the virtual environment is active first
 - If the app says the OpenAI key is missing, recheck the `.env` file
 - If the app returns an authentication error, make sure the API key was copied correctly
-- If `npm` is not found, install Node.js before trying to install Codex CLI
-- If `codex` is not found, try the install command again after confirming `npm` works
+- If Codex cannot see your files, make sure you opened the `acme_welcome_app` folder in the Codex desktop app
+- If Codex asks whether to trust the project, only continue if you recognize this project folder
 
 ## Summary
 
@@ -562,7 +538,7 @@ The simplest mental model is:
 3. Use Python to run the app
 4. Add your own OpenAI API key in `.env`
 5. Test the app locally
-6. Use Codex to help make small changes in plain English
+6. Use the Codex desktop app to help make small changes in plain English
 
 The most important file for changing the assistant's behavior is:
 
