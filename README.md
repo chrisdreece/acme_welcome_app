@@ -4,15 +4,16 @@ This is a lightweight Dash chatbot app that uses OpenAI to act as Acme Watercool
 
 The app is intentionally simple:
 - no database
-- no scenario engine
 - one editable backend prompt
 - one chat interface
 
 ## Start Here
 
-This guide walks through the setup one step at a time. If Terminal, Git, Python, API keys, or Codex are new to you, the explanations below will give you the context you need as you go.
+This guide walks through the setup one step at a time. If Terminal, PowerShell, Git, Python, API keys, or Codex are new to you, the explanations below will give you the context you need as you go.
 
 The goal is not to become an expert in every tool immediately. The goal is to get the app running, understand what each major piece does, and then make small changes safely.
+
+This guide is written for both Windows and macOS users. When the commands are different, follow the Windows PowerShell version on Windows and the macOS Terminal version on macOS. When only one command is shown, it works the same way on both systems.
 
 ## What This App Does
 
@@ -35,7 +36,7 @@ The main goal of your setup is:
 
 This is the recommended order:
 
-1. Understand the basic tools: Terminal, Git, cloning, Python, virtual environments, and API keys
+1. Understand the basic tools: Terminal or PowerShell, Git, cloning, Python, virtual environments, and API keys
 2. Install Git if you do not already have it
 3. Install Python if you do not already have it
 4. Clone or download the repo
@@ -176,7 +177,7 @@ On Windows, run:
 python --version
 ```
 
-On macOS or Linux, run:
+On macOS, run:
 
 ```bash
 python3 --version
@@ -248,7 +249,7 @@ On Windows, run:
 python -m venv .venv
 ```
 
-On macOS or Linux, run:
+On macOS, run:
 
 ```bash
 python3 -m venv .venv
@@ -267,7 +268,7 @@ On Windows PowerShell, run:
 .\.venv\Scripts\Activate.ps1
 ```
 
-On macOS or Linux, run:
+On macOS, run:
 
 ```bash
 source .venv/bin/activate
@@ -300,7 +301,7 @@ On Windows PowerShell, run:
 Copy-Item .env.example .env
 ```
 
-On macOS or Linux, run:
+On macOS, run:
 
 ```bash
 cp .env.example .env
@@ -367,7 +368,7 @@ On Windows:
 python app.py
 ```
 
-On macOS or Linux:
+On macOS:
 
 ```bash
 python3 app.py
@@ -489,7 +490,7 @@ Here is the app in plain English:
 
 - `app.py`
   - the simple top-level launcher
-  - this is what you run with `python app.py` on Windows or `python3 app.py` on macOS/Linux
+- this is what you run with `python app.py` on Windows or `python3 app.py` on macOS
 
 - `scripts/app.py`
   - the Dash web app
@@ -575,7 +576,7 @@ Windows:
 python app.py
 ```
 
-macOS or Linux:
+macOS:
 
 ```bash
 python3 app.py
